@@ -1,6 +1,13 @@
 "reach 0.1";
-const [ isOutcome, WINS, LOSE, NOWIN ] = makeEnum(3);
-
+const [ isOutcome, WINNER, LOSER] = makeEnum(2);
+const result = (x, specialNumber) => {
+  if(x == specialNumber){
+    return  WINNNER;
+  }
+  else return LOSER;
+}
+assert(result(1,1) == WIN )
+assert(result(1,0) == LOST )
 export const main = Reach.App(() => {
   const Alice = Participant('Alice', {
     ...hasRandom,
